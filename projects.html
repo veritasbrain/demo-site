@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Chris Hwang</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Alex Kim</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-    <header>
-        <h1>My Projects</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Projects</h1>
+        <p>Selected work in web apps, visualization, and algorithms</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-        <h2>1. Bayesian Portfolio Optimizer</h2>
-        <p>Streamlit app for constructing market-neutral portfolios using Bayesian factor modeling.</p>
-        <iframe 
-            src="https://my-bayes-optimizer.streamlit.app"
-            width="100%" 
-            height="600" 
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
+  <main class="container">
+    <!-- Streamlit project (iframe) -->
+    <section class="card">
+      <h2>AI Study Assistant (Streamlit)</h2>
+      <p>A Streamlit app that summarizes academic PDFs and web articles using NLP.</p>
+      <div class="embed">
+        <!-- src를 실제 앱 URL로 교체 -->
+        <iframe src="https://your-streamlit-app.streamlit.app" title="AI Study Assistant"></iframe>
+      </div>
+      <p class="muted">If the embed is blocked by the host’s security policy, use the button below.</p>
+      <a class="button" target="_blank" rel="noopener" href="https://your-streamlit-app.streamlit.app">Open in new tab</a>
     </section>
 
-    <section>
-        <h2>2. Sector Rotation Analyzer (Flask App)</h2>
-        <p>Visualizes equal-weight and market-cap-weight sector returns.</p>
-        <a href="https://my-sector-rotation.onrender.com" target="_blank" class="button">Open App</a>
+    <!-- Flask project (link) -->
+    <!-- <section class="card">
+      <h2>CP Progress Tracker (Flask)</h2>
+      <p>Flask app to log problems, topics, and visualize practice trends over time.</p>
+      <a class="button" target="_blank" rel="noopener" href="https://your-flask-app.onrender.com">Open App</a>
+      <div class="meta">
+        <span>Stack: Flask, SQLite/MySQL, Chart.js</span>
+      </div>
     </section>
+-->
+    <!-- Static demo or GitHub link -->
+<!--
+    <section class="card">
+      <h2>Stock Analysis Dashboard</h2>
+      <p>Python + Plotly project for sector rotation visualizations and simple screening.</p>
+      <a class="button" target="_blank" rel="noopener" href="https://github.com/alexkim-demo/stock-analysis-dashboard">View on GitHub</a>
+    </section> 
+-->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Alex Kim</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+    });
+  </script>
 </body>
 </html>

@@ -2,171 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alex Kim | Student Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    body {
-      font-family: "Inter", sans-serif;
-      margin: 0;
-      background-color: #f9fafc;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(120deg, #004aad, #0077ff);
-      color: white;
-      text-align: center;
-      padding: 2.5rem 1rem;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      margin: 0.3rem 0;
-      font-size: 1.1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-    h2 {
-      color: #004aad;
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      margin: 0.5rem 0 1rem 1.5rem;
-    }
-    .highlight {
-      color: #004aad;
-      font-weight: 600;
-    }
-    .button {
-      display: inline-block;
-      background: #004aad;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1rem;
-    }
-    .button:hover {
-      background: #003b8c;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #f0f2f7;
-      color: #555;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 </head>
-
 <body>
-  <header>
-    <h1>Alex Kim</h1>
-    <p>12th Grade Student | STEM & Computer Science Enthusiast</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Alex Kim</h1>
+        <p>12th Grade · Computer Science & Applied Math</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
   </header>
 
-  <section id="intro">
-    <h2>About Me</h2>
-    <p>
-      Hello! I’m <span class="highlight">Alex Kim</span>, a 12th-grade student passionate about
-      computer science, mathematics, and engineering. I enjoy solving algorithmic challenges,
-      building web apps, and exploring how data can be used to make better decisions.
-      My goal is to study <strong>Computer Science and Applied Mathematics</strong> in college.
-    </p>
-  </section>
+  <main class="container">
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Alex Kim</strong>, a 12th-grade student who loves algorithms,
+        data visualization, and building useful web tools. I enjoy competitive programming
+        and creating small apps that solve real problems. My college goal is to major in
+        <strong>Computer Science</strong> with a focus on <strong>Applied Mathematics</strong>.
+      </p>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>Greenwood High School</strong>, Class of 2025
-        <br />
-        GPA: 4.0/4.0 | SAT: 1560 (Math 800, Verbal 760)
-      </li>
-      <li>AP Courses: Calculus BC, Computer Science A, Physics C, Statistics</li>
-    </ul>
-  </section>
+    <section class="grid-2">
+      <div class="card">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>Greenwood High School</strong>, Class of 2025<br/>
+            GPA: 4.0/4.0 · SAT: 1560 (Math 800, Verbal 760)
+          </li>
+          <li>AP: Calculus BC, Computer Science A, Physics C, Statistics</li>
+        </ul>
+      </div>
 
-  <section id="achievements">
-    <h2>Honors & Awards</h2>
-    <ul>
-      <li>American Invitational Mathematics Examination (AIME) Qualifier – 2024</li>
-      <li>USACO Silver Division – 2025</li>
-      <li>ACSL All-Star Finalist – 2024</li>
-      <li>CTY Grand Honors in Mathematical Logic</li>
-    </ul>
-  </section>
+      <div class="card">
+        <h2>Honors & Awards</h2>
+        <ul>
+          <li>AIME Qualifier (2024)</li>
+          <li>USACO Silver (2025)</li>
+          <li>ACSL All-Star Finalist (2024)</li>
+          <li>CTY Grand Honors (Mathematical Logic)</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, C++, Java, JavaScript</li>
-      <li><strong>Tools:</strong> Streamlit, Flask, MySQL, Git, React</li>
-      <li><strong>Concepts:</strong> Data Structures, Algorithms, Machine Learning</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Skills</h2>
+      <ul class="tags">
+        <li>Python</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Streamlit</li>
+        <li>Flask</li>
+        <li>MySQL</li>
+        <li>Git</li>
+        <li>React (basics)</li>
+        <li>Data Structures & Algorithms</li>
+        <li>Machine Learning (intro)</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <ul>
-      <li>
-        <strong>AI Study Assistant</strong> – Built a Streamlit web app that summarizes
-        academic articles using natural language processing.
-      </li>
-      <li>
-        <strong>Stock Analysis Dashboard</strong> – Used Python and Plotly to analyze sector
-        performance and visualize market trends.
-      </li>
-      <li>
-        <strong>Competitive Programming Tracker</strong> – Designed a Flask app to log and
-        visualize algorithm problem progress.
-      </li>
-    </ul>
-    <a href="projects.html" class="button">View All Projects</a>
-  </section>
+    <section class="card">
+      <h2>Highlighted Projects</h2>
+      <ul>
+        <li><strong>AI Study Assistant</strong> — Streamlit app that summarizes academic articles using NLP.</li>
+        <li><strong>Stock Analysis Dashboard</strong> — Sector performance and trend visualizations in Python.</li>
+        <li><strong>CP Progress Tracker</strong> — Flask app that logs and charts algorithm problem practice.</li>
+      </ul>
+      <a class="button" href="projects.html">View All Projects</a>
+    </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>
-      You can download my latest resume below.
-    </p>
-    <a href="assets/AlexKim_Resume.pdf" class="button" target="_blank">View Resume PDF</a>
-  </section>
+    <section class="card">
+      <h2>Resume</h2>
+      <p>Download my latest resume:</p>
+      <a class="button" href="assets/AlexKim_Resume.pdf" target="_blank" rel="noopener">View Resume PDF</a>
+    </section>
+  </main>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:alex.kim@example.com">alex.kim@example.com</a><br />
-      GitHub: <a href="https://github.com/alexkim-demo" target="_blank">github.com/alexkim-demo</a><br />
-      LinkedIn: <a href="https://linkedin.com/in/alexkim" target="_blank">linkedin.com/in/alexkim</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Alex Kim | Built with HTML & CSS on GitHub Pages</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Alex Kim · Built with HTML & CSS on GitHub Pages</p>
+    </div>
   </footer>
+
+  <script>
+    // Simple dark mode toggle with persistence
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+    });
+  </script>
 </body>
 </html>

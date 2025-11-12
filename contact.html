@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Chris Hwang</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Alex Kim</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-    <header>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
         <h1>Contact</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+        <p>Let’s connect</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
 
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>Email: <a href="mailto:chris@cedge.us">chris@cedge.us</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  <main class="container">
+    <section class="card">
+      <h2>Reach Me</h2>
+      <p>Email: <a href="mailto:alex.kim@example.com">alex.kim@example.com</a></p>
+      <p>GitHub: <a target="_blank" rel="noopener" href="https://github.com/alexkim-demo">github.com/alexkim-demo</a></p>
+      <p>LinkedIn: <a target="_blank" rel="noopener" href="https://linkedin.com/in/alexkim">linkedin.com/in/alexkim</a></p>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Chris Hwang</p>
-    </footer>
+    <!-- <section class="card">
+      <h2>Quick Message</h2>
+    -->
+      <!-- GitHub Pages는 서버가 없으므로 mailto 또는 외부 서비스 사용 -->
+<!--
+      <form action="mailto:alex.kim@example.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <label>Name</label>
+          <input type="text" name="name" required/>
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" name="email" required/>
+        </div>
+        <div class="form-row">
+          <label>Message</label>
+          <textarea name="message" rows="5" required></textarea>
+        </div>
+        <button class="button" type="submit">Send via Email</button>
+      </form>
+      <p class="muted">
+        For a real contact form with spam protection, use a service like Formspree or Netlify Forms.
+      </p>
+    </section> -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Alex Kim</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+    });
+  </script>
 </body>
 </html>
+
